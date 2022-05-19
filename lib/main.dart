@@ -44,17 +44,17 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: const EdgeInsets.all(20.0),
           child: Text(
             '${ kIsWeb ? "" : Platform.operatingSystem} Device Info ',
-            style: Theme.of(context).textTheme.headline4,
+            style: Theme.of(context).textTheme.headline5,
           ),
         ),
-        SizedBox(
-          height: MediaQuery.of(context).size.height * 0.8,
-          child: FutureBuilder<BaseDeviceInfo>(
-              future: deviceInfo.deviceInfo,
-              builder: (context, snapshot) {
-                if (!snapshot.hasData) return const CircularProgressIndicator();
-                var info = snapshot.data!.toMap();
-                return ListView.builder(
+        FutureBuilder<BaseDeviceInfo>(
+            future: deviceInfo.deviceInfo,
+            builder: (context, snapshot) {
+              if (!snapshot.hasData) return const SizedBox(height: 50, child: CircularProgressIndicator());
+              var info = snapshot.data!.toMap();
+              return SizedBox(
+                height: MediaQuery.of(context).size.height * 0.80,
+                child: ListView.builder(
                     itemCount: info.length,
                     itemBuilder: (ctx, i) => ListTile(
                             title: RichText(
@@ -66,9 +66,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                     text: info[info.keys.elementAt(i)].toString(),
                                     style: const TextStyle(color: Colors.black, fontWeight: FontWeight.normal))
                               ]),
-                        )));
-              }),
-        )
+                        ))),
+              );
+            })
       ]),
     );
   }
