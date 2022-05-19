@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
         Padding(
           padding: const EdgeInsets.all(20.0),
           child: Text(
-            '${ kIsWeb ? "" : Platform.operatingSystem} Device Info ',
+            '${ kIsWeb ? "Web" : Platform.operatingSystem} Device Info ',
             style: Theme.of(context).textTheme.headline5,
           ),
         ),

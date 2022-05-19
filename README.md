@@ -1,16 +1,13 @@
-# device_info
+# Flutter device_info demo  
 
-A new Flutter project.
+
+![misc/screenshot.png](misc/screenshot.png)
+this is a demo application running [device_info_plus](https://pub.dev/packages/device_info_plus) package on all platforms , this is useful for checking avaiable device info and customizing your app based on the result .
+
+
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- clone this project  ` git clone  https://github.com/egyleader/device_info_demo.git `
+- check available devices using `flutter devices`
+- run app on your desired deviec using flutter run -d YOUR_DEVICE_ID
